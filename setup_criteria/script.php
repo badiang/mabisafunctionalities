@@ -40,7 +40,7 @@ if (isset($_POST['add_maintenance_criteria_setup'])) {
 
 
     if (mysqli_query($conn, $insert_maintenance_criteria_setup)) {
-        echo "<script>alert('New record created successfully'); window.location.href='index_sc.php'</script>";
+        echo "<script>alert('New record created successfully'); window.location.href='index.php'</script>";
     } else {
         echo "Error: " . $insert_maintenance_criteria_setup . "<br>" . mysqli_error($conn);
     }
@@ -84,7 +84,7 @@ if (isset($_POST['update_maintenance_criteria_setup'])) {
 
 
     if (mysqli_query($conn, $update_maintenance_criteria_setup)) {
-        echo "<script>alert('Record updated successfully'); window.location.href='index_sc.php'</script>";
+        echo "<script>alert('Record updated successfully'); window.location.href='index.php'</script>";
     } else {
         echo "Error: " . $update_maintenance_criteria_setup . "<br>" . mysqli_error($conn);
     }
@@ -99,7 +99,7 @@ if (isset($_GET['delete_id'])) {
     $delete_maintenance_criteria_setup = "DELETE FROM maintenance_criteria_setup WHERE keyctr= $id";
 
     if (mysqli_query($conn, $delete_maintenance_criteria_setup)) {
-        echo "<script>alert('Deleted successfully'); window.location.href='index_sc.php'</script>";
+        echo "<script>alert('Deleted successfully'); window.location.href='index.php'</script>";
     } else {
         echo "Error: " . $delete_maintenance_criteria_setup . "<br>" . mysqli_error($conn);
     }
